@@ -44,6 +44,7 @@
         Me.Tab1 = Me.Factory.CreateRibbonTab
         Me.Group1 = Me.Factory.CreateRibbonGroup
         Me.btnSelectSong = Me.Factory.CreateRibbonButton
+        Me.btnPasteText = Me.Factory.CreateRibbonButton
         Me.Tab1.SuspendLayout()
         Me.Group1.SuspendLayout()
         Me.SuspendLayout()
@@ -58,6 +59,7 @@
         'Group1
         '
         Me.Group1.Items.Add(Me.btnSelectSong)
+        Me.Group1.Items.Add(Me.btnPasteText)
         Me.Group1.Label = "Insert Song"
         Me.Group1.Name = "Group1"
         '
@@ -68,6 +70,14 @@
         Me.btnSelectSong.Label = "Select Song"
         Me.btnSelectSong.Name = "btnSelectSong"
         Me.btnSelectSong.ShowImage = True
+        '
+        'btnPasteText
+        '
+        Me.btnPasteText.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
+        Me.btnPasteText.Image = Global.Lyrics_Helper.My.Resources.Resources.text_box
+        Me.btnPasteText.Label = "Paste Directly"
+        Me.btnPasteText.Name = "btnPasteText"
+        Me.btnPasteText.ShowImage = True
         '
         'Ribbon1
         '
@@ -85,6 +95,7 @@
     Friend WithEvents Tab1 As Microsoft.Office.Tools.Ribbon.RibbonTab
     Friend WithEvents Group1 As Microsoft.Office.Tools.Ribbon.RibbonGroup
     Friend WithEvents btnSelectSong As Microsoft.Office.Tools.Ribbon.RibbonButton
+    Friend WithEvents btnPasteText As Microsoft.Office.Tools.Ribbon.RibbonButton
 End Class
 
 Partial Class ThisRibbonCollection

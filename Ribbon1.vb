@@ -27,4 +27,23 @@ Public Class Ribbon1
             MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub btnPasteText_Click(sender As Object, e As RibbonControlEventArgs) Handles btnPasteText.Click
+        Try
+            Dim getLyrics As New GetLyrics()
+            Dim result As String = getLyrics.PasteDlg()
+
+            If result IsNot Nothing Then
+                If result.Contains("successfully") Then
+                    MessageBox.Show(result, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show(result, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            Else
+                MessageBox.Show("Operation cancelled.", "Lyrics Import", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class
