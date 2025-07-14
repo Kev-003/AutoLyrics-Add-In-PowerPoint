@@ -1,4 +1,4 @@
-# PowerPoint Lyrics Importer
+# AutoLyrics Add-In for PowerPoint
 
 A PowerPoint VSTO add-in that automatically imports song lyrics from text files and creates individual slides for each verse or chorus, perfect for worship services, karaoke presentations, or music performances.
 
